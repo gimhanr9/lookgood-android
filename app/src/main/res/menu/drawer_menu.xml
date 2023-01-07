@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/home"
+            android:title="@string/home" />
+
+
+        <item
+            android:id="@+id/accountFragment"
+            android:icon="@drawable/user"
+            android:title="@string/account" />
+    </group>
+
+    <item android:title="Categories">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/favouritesFragment"
+                    android:icon="@drawable/favourite_drawer"
+                    android:title="@string/favourites" />
+
+            <item
+                android:id="@+id/mensFragment"
+                android:icon="@drawable/suit"
+                android:title="@string/gents" />
+
+                <item
+                    android:id="@+id/ladiesFragment"
+                    android:icon="@drawable/dress"
+                    android:title="@string/ladies" />
+                <item
+                    android:id="@+id/kidsFragment"
+                    android:icon="@drawable/onesie"
+                    android:title="@string/kids" />
+                <item
+                    android:id="@+id/accessoriesFragment"
+                    android:icon="@drawable/bags"
+                    android:title="@string/accessories" />
+
+                <item
+                    android:id="@+id/purchasesFragment"
+                    android:icon="@drawable/shopping_bags"
+                    android:title="@string/purchases" />
+
+
+                <item
+                    android:id="@+id/contactFragment"
+                    android:icon="@drawable/call_us"
+                    android:title="@string/contact_us" />
+
+
+            </group>
+        </menu>
+    </item>
+
+</menu>

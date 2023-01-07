@@ -1,0 +1,139 @@
+<resources>
+    <string name="app_name">LookGOOD</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username_login">Username</string>
+    <string name="password_login">Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="register">Register</string>
+    <string name="account">Account</string>
+    <string name="gents">Gents</string>
+    <string name="ladies">Ladies</string>
+    <string name="kids">Kids</string>
+    <string name="accessories">Accessories</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="total_priceCart">Total: Rs 0</string>
+    <string name="place_order">Place Order</string>
+    <string name="logout">Logout</string>
+    <string name="cart">Cart</string>
+    <string name="home">Home</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="back_to_login">Back to login</string>
+    <string name="full_name">Full Name</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="save">Save</string>
+    <string name="show_all">Show All</string>
+    <string name="email">Email</string>
+    <string name="edit">Edit</string>
+    <string name="confirm_message">To change your email, you need to enter your password again!</string>
+    <string name="confirm">Confirm</string>
+    <string name="update_email">Enter new email address</string>
+    <string name="change_email">Change Email</string>
+    <string name="exit">Exit</string>
+    <string name="update">Update</string>
+    <string name="change_password">Change Password</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="call_sub_text">Call our friendly customer support service and clear all your at doubts any time 24/7</string>
+    <string name="need_help">Need Help!</string>
+    <string name="call">CALL</string>
+    <string name="product_name">Product Name</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="xlarge">XLarge</string>
+    <string name="xxlarge">XXLarge</string>
+    <string name="description">Description</string>
+    <string name="images">Images</string>
+    <string name="add_images">Add Images</string>
+    <string name="upload">Upload</string>
+    <string name="items_available">items available</string>
+    <string name="no_questions">No questions asked for this product</string>
+    <string name="no_ratings">No ratings available for this product</string>
+    <string name="favourites">Favourites</string>
+    <string name="purchases">Purchases</string>
+    <string name="login_favourite_message">Please login to access your favourite items!</string>
+    <string name="cart_login_message">Please login to access your shopping cart!</string>
+    <string name="write_review">Write Review</string>
+    <string name="orderdetail_confirmation_header">Confirm your details…</string>
+    <string name="orderdetail_enter_header">Enter your details…</string>
+    <string name="confirm_amp_pay"><![CDATA[Confirm & Pay]]></string>
+    <string name="processing_payment">Processing Payment…</string>
+    <string name="card_number">Card Number</string>
+    <string name="cvv">CVV</string>
+    <string name="rating_division">/5</string>
+
+    <string-array name="quantity_string_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="cards_array">
+        <item>Master</item>
+        <item>Visa</item>
+        <item>Amex</item>
+        <item>Maestro</item>
+        <item>Discover</item>
+    </string-array>
+
+    <string-array name="brand_array">
+        <item>Nike</item>
+        <item>H&amp;M</item>
+        <item>Levis</item>
+        <item>Adidas</item>
+        <item>GUCCI</item>
+        <item>ZARA</item>
+        <item>Rolex</item>
+        <item>Tissot</item>
+        <item>Casio</item>
+    </string-array>
+
+    <string-array name="items_array">
+        <item>Mens Top</item>
+        <item>Mens Bottom</item>
+        <item>Mens Footwear</item>
+        <item>Mens Undergarment</item>
+        <item>Womens Top</item>
+        <item>Womens Bottom</item>
+        <item>Womens Footwear</item>
+        <item>Womens Undergarment</item>
+        <item>Boys Top</item>
+        <item>Boys Bottom</item>
+        <item>Boys Footwear</item>
+        <item>Girls Top</item>
+        <item>Girls Bottom</item>
+        <item>Girls Footwear</item>
+        <item>Handbag</item>
+        <item>Watches</item>
+        <item>Sunglasses</item>
+    </string-array>
+
+    <string-array name="sort_array">
+        <item>Show All</item>
+        <item>Brand</item>
+        <item>Price</item>
+    </string-array>
+
+    <string-array name="quantity_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10(Max)</item>
+    </string-array>
+
+</resources>

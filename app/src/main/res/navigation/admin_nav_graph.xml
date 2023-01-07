@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_nav_graph"
+    app:startDestination="@id/adminHomeFragment">
+
+    <fragment
+        android:id="@+id/adminHomeFragment"
+        android:name="com.cb008385.lookgood.AdminHomeFragment"
+        android:label="Admin Home" >
+        <action
+            android:id="@+id/action_adminHomeFragment_to_viewProductFragment"
+            app:destination="@id/viewProductFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/answerSheetDialog"
+        android:name="com.cb008385.lookgood.AnswerSheetDialog"
+        android:label="Answer Sheet" >
+        <argument
+            android:name="questionId"
+            app:argType="string" />
+        <argument
+            android:name="productId"
+            app:argType="string" />
+        <argument
+            android:name="customerName"
+            app:argType="string" />
+        <argument
+            android:name="question"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/adminQuestionListFragment"
+        android:name="com.cb008385.lookgood.AdminQuestionListFragment"
+        android:label="Question List" >
+        <action
+            android:id="@+id/action_adminQuestionListFragment_to_answerSheetDialog"
+            app:destination="@id/answerSheetDialog" />
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewProductFragment"
+        android:name="com.cb008385.lookgood.ViewProductFragment"
+        android:label="Products" >
+        <action
+            android:id="@+id/action_viewProductFragment_to_adminProductDetailFragment"
+            app:destination="@id/adminProductDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminProductDetailFragment"
+        android:name="com.cb008385.lookgood.AdminProductDetailFragment"
+        android:label="Product Detail"
+        tools:layout="@layout/fragment_admin_product_detail" >
+        <action
+            android:id="@+id/action_adminProductDetailFragment_to_adminQuestionListFragment"
+            app:destination="@id/adminQuestionListFragment" />
+        <argument
+            android:name="productId"
+            app:argType="string" />
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="brand"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="small"
+            app:argType="integer" />
+        <argument
+            android:name="medium"
+            app:argType="integer" />
+        <argument
+            android:name="large"
+            app:argType="integer" />
+        <argument
+            android:name="xlarge"
+            app:argType="integer" />
+        <argument
+            android:name="xxl"
+            app:argType="integer" />
+        <argument
+            android:name="price"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_adminProductDetailFragment_to_adminRatingListFragment"
+            app:destination="@id/adminRatingListFragment" />
+        <action
+            android:id="@+id/action_adminProductDetailFragment_to_adminUpdateFragment"
+            app:destination="@id/adminUpdateFragment" />
+        <action
+            android:id="@+id/action_adminProductDetailFragment_to_alertDialog"
+            app:destination="@id/alertDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminRatingListFragment"
+        android:name="com.cb008385.lookgood.AdminRatingListFragment"
+        android:label="Rating List" >
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+    <dialog
+        android:id="@+id/adminUpdateFragment"
+        android:name="com.cb008385.lookgood.AdminUpdateFragment"
+        android:label="Update Product"
+        tools:layout="@layout/fragment_admin_update" >
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </dialog>
+    <dialog
+        android:id="@+id/alertDialog"
+        android:name="com.cb008385.lookgood.AlertDialog"
+        android:label="Alert" >
+        <argument android:name="productId" />
+    </dialog>
+</navigation>

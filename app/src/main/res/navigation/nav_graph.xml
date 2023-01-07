@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.cb008385.lookgood.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.cb008385.lookgood.AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_reauthFragment"
+            app:destination="@id/reauthFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accessoriesFragment"
+        android:name="com.cb008385.lookgood.AccessoriesFragment"
+        android:label="Accessories"
+        tools:layout="@layout/fragment_accessories" />
+    <fragment
+        android:id="@+id/kidsFragment"
+        android:name="com.cb008385.lookgood.KidsFragment"
+        android:label="Kids"
+        tools:layout="@layout/fragment_kids" />
+    <fragment
+        android:id="@+id/mensFragment"
+        android:name="com.cb008385.lookgood.MensFragment"
+        android:label="Mens"
+        tools:layout="@layout/fragment_mens" />
+    <fragment
+        android:id="@+id/ladiesFragment"
+        android:name="com.cb008385.lookgood.LadiesFragment"
+        android:label="Ladies"
+        tools:layout="@layout/fragment_ladies" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.cb008385.lookgood.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_cartFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_confirmPurchaseFragment"
+            app:destination="@id/confirmPurchaseFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.cb008385.lookgood.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_userFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_userFragment_to_verificationEmailFragment"
+            app:destination="@id/verificationEmailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.cb008385.lookgood.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_userFragment"
+            app:destination="@id/userFragment"
+            app:popUpTo="@id/userFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_registerFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/reauthFragment"
+        android:name="com.cb008385.lookgood.ReauthFragment"
+        android:label="Reauthentication"
+        tools:layout="@layout/fragment_reauth">
+        <action
+            android:id="@+id/action_reauthFragment_to_updateEmailFragment"
+            app:destination="@id/updateEmailFragment" />
+        <action
+            android:id="@+id/action_reauthFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateEmailFragment"
+        android:name="com.cb008385.lookgood.UpdateEmailFragment"
+        android:label="Update Email"
+        tools:layout="@layout/fragment_update_email">
+        <action
+            android:id="@+id/action_updateEmailFragment_to_accountFragment"
+            app:destination="@id/accountFragment"
+            app:popUpTo="@id/accountFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.cb008385.lookgood.ResetPasswordFragment"
+        android:label="Reset Password" >
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_accountFragment"
+            app:destination="@id/accountFragment"
+            app:popUpTo="@id/accountFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationEmailFragment"
+        android:name="com.cb008385.lookgood.VerificationEmailFragment"
+        android:label="Email Verification"
+        tools:layout="@layout/fragment_verification_email">
+        <action
+            android:id="@+id/action_verificationEmailFragment_to_userFragment"
+            app:destination="@id/userFragment"
+            app:popUpTo="@id/userFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.cb008385.lookgood.ContactFragment"
+        android:label="Contact Us"
+        tools:layout="@layout/fragment_contact" />
+    <dialog
+        android:id="@+id/questionSheetDialog"
+        android:name="com.cb008385.lookgood.QuestionSheetDialog"
+        android:label="Question Sheet"
+        tools:layout="@layout/bottomsheet_dialog_question">
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.cb008385.lookgood.ProductDetailsFragment"
+        android:label="Product Details"
+        tools:layout="@layout/fragment_product_details">
+        <argument
+            android:name="productId"
+            app:argType="string" />
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+
+        <argument
+            android:name="productName"
+            app:argType="string" />
+        <argument
+            android:name="productTitle"
+            app:argType="string" />
+        <argument
+            android:name="brand"
+            app:argType="string" />
+        <argument
+            android:name="description"
+            app:argType="string" />
+        <argument
+            android:name="small"
+            app:argType="integer" />
+        <argument
+            android:name="medium"
+            app:argType="integer" />
+        <argument
+            android:name="large"
+            app:argType="integer" />
+        <argument
+            android:name="xlarge"
+            app:argType="integer" />
+        <argument
+            android:name="xxlarge"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_questionSheetDialog"
+            app:destination="@id/questionSheetDialog" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_questionListFragment"
+            app:destination="@id/questionListFragment" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <argument
+            android:name="price"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_ratingListFragment"
+            app:destination="@id/ratingListFragment" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_guestCheckoutFragment"
+            app:destination="@id/guestCheckoutFragment" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_confirmPurchaseFragment"
+            app:destination="@id/confirmPurchaseFragment" />
+        <action
+            android:id="@+id/action_productDetailsFragment_to_registeredUserSinglePurchaseFragment"
+            app:destination="@id/registeredUserSinglePurchaseFragment" />
+
+    </fragment>
+    <action android:id="@+id/action_global_productDetailsFragment" app:destination="@id/productDetailsFragment" />
+    <fragment
+        android:id="@+id/questionListFragment"
+        android:name="com.cb008385.lookgood.QuestionListFragment"
+        android:label="Question List" >
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mensTopsFragment"
+        android:name="com.cb008385.lookgood.ProductFragment"
+        android:label="Products"
+        tools:layout="@layout/fragment_products">
+        <argument
+            android:name="category"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/purchasesFragment"
+        android:name="com.cb008385.lookgood.PurchasesFragment"
+        android:label="Purchases"
+        tools:layout="@layout/fragment_purchases" >
+        <action
+            android:id="@+id/action_purchasesFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+        <action
+            android:id="@+id/action_purchasesFragment_to_reviewSheetDialog"
+            app:destination="@id/reviewSheetDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.cb008385.lookgood.FavouritesFragment"
+        android:label="Favourites"
+        tools:layout="@layout/fragment_favourites" >
+        <action
+            android:id="@+id/action_favouritesFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmPurchaseFragment"
+        android:name="com.cb008385.lookgood.ConfirmPurchaseFragment"
+        android:label="Confirm Purchase" >
+        <action
+            android:id="@+id/action_confirmPurchaseFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_confirmPurchaseFragment_to_orderConfirmationFragment"
+            app:destination="@id/orderConfirmationFragment"
+            app:popUpTo="@id/orderConfirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ratingListFragment"
+        android:name="com.cb008385.lookgood.RatingListFragment"
+        android:label="Ratings" >
+        <argument
+            android:name="productId"
+            app:argType="string" />
+    </fragment>
+    <action android:id="@+id/action_global_mensTopsFragment" app:destination="@id/mensTopsFragment" />
+    <dialog
+        android:id="@+id/reviewSheetDialog"
+        android:name="com.cb008385.lookgood.ReviewSheetDialog"
+        android:label="Review Sheet" >
+        <argument
+            android:name="productId"
+            app:argType="string" />
+        <argument
+            android:name="purchaseKey"
+            app:argType="string" />
+        <argument
+            android:name="isRated"
+            app:argType="boolean" />
+        <argument
+            android:name="size"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/guestCheckoutFragment"
+        android:name="com.cb008385.lookgood.GuestCheckoutFragment"
+        android:label="Guest Checkout" >
+        <action
+            android:id="@+id/action_guestCheckoutFragment_to_orderConfirmationFragment"
+            app:destination="@id/orderConfirmationFragment"
+            app:popUpTo="@id/orderConfirmationFragment" />
+        <argument
+            android:name="productId"
+            app:argType="string" />
+        <argument
+            android:name="productImage"
+            app:argType="string" />
+        <argument
+            android:name="productName"
+            app:argType="string" />
+        <argument
+            android:name="size"
+            app:argType="string" />
+        <argument
+            android:name="quantity"
+            app:argType="integer" />
+        <argument
+            android:name="price"
+            app:argType="float" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderConfirmationFragment"
+        android:name="com.cb008385.lookgood.OrderConfirmationFragment"
+        android:label="Order Confirmation" >
+        <action
+            android:id="@+id/action_orderConfirmationFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/registeredUserSinglePurchaseFragment"
+        android:name="com.cb008385.lookgood.RegisteredUserSinglePurchaseFragment"
+        android:label="Single Purchase Fragment" >
+        <action
+            android:id="@+id/action_registeredUserSinglePurchaseFragment_to_orderConfirmationFragment"
+            app:destination="@id/orderConfirmationFragment"
+            app:popUpTo="@id/orderConfirmationFragment" />
+        <argument
+            android:name="productId"
+            app:argType="string" />
+        <argument
+            android:name="productImage"
+            app:argType="string" />
+        <argument
+            android:name="productName"
+            app:argType="string" />
+        <argument
+            android:name="size"
+            app:argType="string" />
+        <argument
+            android:name="quantity"
+            app:argType="integer" />
+        <argument
+            android:name="price"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_registeredUserSinglePurchaseFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+    </fragment>
+</navigation>
